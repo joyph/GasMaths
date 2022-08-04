@@ -1,0 +1,19 @@
+[package]
+name = "gas_maths"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = {version="0.4.19", features =["serde"]}
+reqwest = { version = "0.11", features = ["blocking", "json"] }
+rust_decimal = {version = "1.25.0", features= ["serde"]}
+zip = { version = "0.6.2" }
+csv = "1.1" #encode csv
+serde = { version = "1", features = ["derive"] }
+
+[dependencies.rm_daemon_utils]
+path = "../../utils"
+default-features = false
+features = ["lazy_static", "webserver"]
